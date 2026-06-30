@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#080C14"
+        android:pathData="M0,0h108v108h-108z" />
+    <!-- Subtle Sapphire Grid -->
+    <path
+        android:fillColor="#1C2533"
+        android:pathData="M0,27h108v1h-108zM0,54h108v1h-108zM0,81h108v1h-108zM27,0v108h1v-108zM54,0v108h1v-108zM81,0v108h1v-108z" />
+</vector>

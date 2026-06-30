@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/calc_background"
+    android:paddingTop="12dp">
+
+    <!-- Custom Menu Selector (Pill Style) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/menu_bg"
+            android:padding="3dp">
+
+            <!-- Selection Highlight -->
+            <View
+                android:id="@+id/menuSelectorHighlight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/menu_item_selected" />
+
+            <LinearLayout
+                android:id="@+id/menuContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <TextView android:id="@+id/menuBasic" style="@style/MenuSelectorText" android:text="Basic" android:textColor="@color/bg_sapphire_deep" />
+                <TextView android:id="@+id/menuScientific" style="@style/MenuSelectorText" android:text="Scientific" android:textColor="@color/calc_text_secondary" />
+                <TextView android:id="@+id/menuMatrix" style="@style/MenuSelectorText" android:text="Matrix" android:textColor="@color/calc_text_secondary" />
+                <TextView android:id="@+id/menuStats" style="@style/MenuSelectorText" android:text="Stats" android:textColor="@color/calc_text_secondary" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Glass Display Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="20dp"
+        android:background="@drawable/display_background"
+        android:backgroundTint="#1C2533"
+        android:orientation="vertical"
+        android:gravity="bottom|end">
+
+        <EditText
+            android:id="@+id/tvExpression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="end"
+            android:text=""
+            android:textSize="20sp"
+            android:textColor="@color/calc_text_secondary"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:typeface="monospace"
+            android:maxLines="3" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="36sp"
+            android:textColor="@color/calc_text_primary"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:typeface="monospace"
+            android:maxLines="4"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+    <!-- Controls Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="12dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/gridScientific"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:columnCount="5">
+                    <Button android:id="@+id/btn2nd" style="@style/CalcButton.Scientific" android:text="2nd" android:onClick="on2ndToggle" />
+                    <Button android:id="@+id/btnRadDeg" style="@style/CalcButton.Scientific" android:text="RAD" android:onClick="onRadDegToggle" />
+                    <Button style="@style/CalcButton.Scientific" android:text="log" android:id="@+id/btnLog" android:onClick="onScientificClick" />
+                    <Button style="@style/CalcButton.Scientific" android:text="ln" android:id="@+id/btnLn" android:onClick="onScientificClick" />
+                    <Button style="@style/CalcButton.Scientific" android:text="(" android:onClick="onBracketClick" />
+
+                    <Button style="@style/CalcButton.Scientific" android:text=")" android:onClick="onBracketClick" />
+                    <Button android:id="@+id/btnSin" style="@style/CalcButton.Scientific" android:text="sin" android:onClick="onScientificClick" />
+                    <Button android:id="@+id/btnCos" style="@style/CalcButton.Scientific" android:text="cos" android:onClick="onScientificClick" />
+                    <Button android:id="@+id/btnTan" style="@style/CalcButton.Scientific" android:text="tan" android:onClick="onScientificClick" />
+                    <Button style="@style/CalcButton.Scientific" android:text="abs" android:id="@+id/btnInv" android:onClick="onScientificClick" />
+
+                    <Button style="@style/CalcButton.Scientific" android:text="π" android:onClick="onNumberClick" />
+                    <Button android:id="@+id/btnSinh" style="@style/CalcButton.Scientific" android:text="sinh" android:onClick="onScientificClick" />
+                    <Button android:id="@+id/btnCosh" style="@style/CalcButton.Scientific" android:text="cosh" android:onClick="onScientificClick" />
+                    <Button android:id="@+id/btnTanh" style="@style/CalcButton.Scientific" android:text="tanh" android:onClick="onScientificClick" />
+                    <Button style="@style/CalcButton.Scientific" android:text="√" android:id="@+id/btnSq" android:onClick="onScientificClick" />
+
+                    <Button style="@style/CalcButton.Scientific" android:text="e" android:onClick="onNumberClick" />
+                    <Button style="@style/CalcButton.Scientific" android:text="xʸ" android:id="@+id/btnPow" android:onClick="onOperatorClick" />
+                    <Button style="@style/CalcButton.Scientific" android:text="!" android:onClick="onOperatorClick" />
+                    <Button style="@style/CalcButton.Scientific" android:text="%" android:onClick="onOperatorClick" />
+                    <Button style="@style/CalcButton.Scientific" android:text="," android:onClick="onNumberClick" />
+
+                    <Button style="@style/CalcButton.Scientific" android:text="1/x" android:onClick="onScientificClick" />
+                    <Button style="@style/CalcButton.Scientific" android:text="C" android:onClick="onClearClick" />
+                </GridLayout>
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/gridMatrix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="5"
+                android:visibility="gone">
+                <Button style="@style/CalcButton.Scientific" android:text="2x2" android:onClick="onMatrixTemplateClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="3x3" android:onClick="onMatrixTemplateClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="4x4" android:onClick="onMatrixTemplateClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="inv" android:onClick="onScientificClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="det" android:onClick="onScientificClick" />
+
+                <Button style="@style/CalcButton.Scientific" android:text="T" android:onClick="onScientificClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="id" android:onClick="onScientificClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="(" android:onClick="onBracketClick" />
+                <Button style="@style/CalcButton.Scientific" android:text=")" android:onClick="onBracketClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="," android:onClick="onNumberClick" />
+            </GridLayout>
+
+            <GridLayout
+                android:id="@+id/gridStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="5"
+                android:visibility="gone">
+                <Button style="@style/CalcButton.Scientific" android:text="mean" android:onClick="onScientificClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="stdDev" android:onClick="onScientificClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="var" android:onClick="onScientificClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="sum" android:onClick="onScientificClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="min" android:onClick="onScientificClick" />
+
+                <Button style="@style/CalcButton.Scientific" android:text="max" android:onClick="onScientificClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="count" android:onClick="onScientificClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="(" android:onClick="onBracketClick" />
+                <Button style="@style/CalcButton.Scientific" android:text=")" android:onClick="onBracketClick" />
+                <Button style="@style/CalcButton.Scientific" android:text="," android:onClick="onNumberClick" />
+            </GridLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMatrixEditor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center"
+                android:padding="4dp">
+                <GridLayout android:id="@+id/matrixInputGrid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="2" android:rowCount="2" android:background="@drawable/display_background" android:backgroundTint="@color/glass_surface"/>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="4dp">
+                    <Button style="@style/CalcButton.Scientific" android:text="Cancel" android:onClick="onCancelMatrix" />
+                    <Button style="@style/CalcButton.Operator" android:layout_width="0dp" android:layout_height="32dp" android:layout_weight="1" android:text="Done" android:textSize="12sp" android:onClick="onApplyMatrix" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Basic Grid -->
+        <GridLayout
+            android:id="@+id/gridBasic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4">
+            <Button style="@style/CalcButton.Function" android:text="AC" android:textColor="#F87171" android:onClick="onClearClick" />
+            <Button style="@style/CalcButton.Function" android:text="+/-" android:onClick="onOperatorClick" />
+            <Button style="@style/CalcButton.Function" android:text="%" android:onClick="onOperatorClick" />
+            <Button style="@style/CalcButton.Operator" android:text="/" android:onClick="onOperatorClick" />
+            <Button style="@style/CalcButton.Number" android:text="7" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Number" android:text="8" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Number" android:text="9" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Operator" android:text="*" android:onClick="onOperatorClick" />
+            <Button style="@style/CalcButton.Number" android:text="4" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Number" android:text="5" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Number" android:text="6" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Operator" android:text="-" android:onClick="onOperatorClick" />
+            <Button style="@style/CalcButton.Number" android:text="1" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Number" android:text="2" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Number" android:text="3" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Operator" android:text="+" android:onClick="onOperatorClick" />
+            <Button style="@style/CalcButton.Number" android:text="0" android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Number" android:text="," android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Number" android:text="." android:onClick="onNumberClick" />
+            <Button style="@style/CalcButton.Equal" android:text="=" android:onClick="onEqualClick" />
+        </GridLayout>
+    </LinearLayout>
+
+</LinearLayout>

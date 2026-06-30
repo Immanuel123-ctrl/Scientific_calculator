@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Use MaterialComponents theme to enable MaterialButton features -->
+    <style name="Theme.Calculator" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/sapphire_navy</item>
+        <item name="colorPrimaryVariant">@color/sapphire_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/gold_primary</item>
+        <item name="colorSecondaryVariant">@color/gold_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/sapphire_navy</item>
+    </style>
+</resources>

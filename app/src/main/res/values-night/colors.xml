@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Mode Palette - Emerald Green Theme -->
+    <color name="calc_background">#0A2E28</color>
+    <color name="calc_surface_number">#143D36</color>
+    <color name="calc_surface_function">#1F5249</color>
+    <color name="calc_surface_scientific">#0D3831</color>
+    <color name="calc_text_primary">#E0F2F1</color>
+    <color name="calc_text_secondary">#80CBC4</color>
+</resources>

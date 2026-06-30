@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Liquid Glass Sapphire & Gold Palette -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Dark Mode - Liquid Sapphire -->
+    <color name="bg_sapphire_deep">#080C14</color>
+    <color name="sapphire_navy">#0A111F</color>
+    <color name="sapphire_dark">#06090F</color>
+    <color name="glass_surface">#1C2533</color>
+    <color name="glass_surface_light">#2D3A4F</color>
+    <color name="glass_border">#3D4D66</color>
+
+    <color name="gold_glow">#FFC107</color>
+    <color name="gold_dark">#B45309</color>
+    <color name="gold_primary">#FFC107</color>
+    <color name="gold_secondary">#B45309</color>
+
+    <!-- Light Mode - Crystal Clear -->
+    <color name="bg_crystal_light">#F0F4F8</color>
+    <color name="glass_surface_white">#E1E8F0</color>
+    <color name="text_primary_light">#1E293B</color>
+    <color name="text_secondary_light">#475569</color>
+
+    <!-- Semantic UI Colors -->
+    <color name="calc_background">@color/bg_sapphire_deep</color>
+    <color name="calc_surface_number">@color/glass_surface</color>
+    <color name="calc_surface_function">@color/glass_surface_light</color>
+    <color name="calc_text_primary">#F8FAFC</color>
+    <color name="calc_text_secondary">#94A3B8</color>
+</resources>

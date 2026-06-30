@@ -1,0 +1,1 @@
+git remote set-url origin https://github.com/Immanuel123-ctrl/Scientific_calculator.git

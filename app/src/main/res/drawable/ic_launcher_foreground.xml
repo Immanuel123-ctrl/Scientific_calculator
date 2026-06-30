@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Main Calculator Shape -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M34,26 C31,26 28,29 28,32 L28,76 C28,79 31,82 34,82 L74,82 C77,82 80,79 80,76 L80,32 C80,29 77,26 74,26 L34,26 Z M34,30 L74,30 C75,30 76,31 76,32 L76,42 L32,42 L32,32 C32,31 33,30 34,30 Z M32,46 L76,46 L76,76 C76,77 75,78 74,78 L34,78 C33,78 32,77 32,76 L32,46 Z" />
+
+    <!-- Buttons -->
+    <path
+        android:fillColor="#FFC107"
+        android:alpha="0.8"
+        android:pathData="M38,52h8v8h-8z M50,52h8v8h-8z M62,52h8v8h-8z M38,64h8v8h-8z M50,64h8v8h-8z M62,64h8v8h-8z" />
+
+    <!-- Equal Sign -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M50,34h12v2h-12z M50,38h12v2h-12z" />
+
+</vector>
