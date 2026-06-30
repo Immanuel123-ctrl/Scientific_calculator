@@ -41,7 +41,12 @@ A professional, feature-rich Android calculator with a custom "Liquid Sapphire &
 3. Sync Gradle and run the app on an emulator or physical device.
 
 ## 📸 UI Preview
-*(Add your screenshots here to showcase the Sapphire & Gold theme!)*
+
+<p align="center">
+  <img src="screenshots/basic.png" width="30%" />
+  <img src="screenshots/scientific.png" width="30%" /> 
+  <img src="screenshots/matrix.png" width="30%" />
+</p>
 
 ---
 **Developed by [Immanuel123-ctrl](https://github.com/Immanuel123-ctrl)**
